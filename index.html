@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knit Pocket - Affordable iPhone Carrier Alternative</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: #fff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px 60px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero .price-highlight {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .price-inr {
+            font-size: 0.85em;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1d1d1f;
+        }
+
+        .apple-reference {
+            background: #f5f5f7;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .apple-reference h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #1d1d1f;
+        }
+
+        .apple-link {
+            display: inline-block;
+            background: #0071e3;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .apple-link:hover {
+            background: #0077ed;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .image-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .image-card-content {
+            padding: 20px;
+        }
+
+        .image-card-content h4 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #1d1d1f;
+        }
+
+        .image-card-content p {
+            color: #6e6e73;
+            font-size: 0.95em;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 40px 0;
+        }
+
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-size: 1.1em;
+        }
+
+        .comparison-table td {
+            padding: 20px;
+            border-bottom: 1px solid #f5f5f7;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-big {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.2em;
+        }
+
+        .savings {
+            color: #34c759;
+            font-weight: 700;
+            font-size: 1.3em;
+            margin-top: 10px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 30px;
+            background: #f5f5f7;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .feature-box h4 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #1d1d1f;
+        }
+
+        .feature-box p {
+            color: #6e6e73;
+            font-size: 0.95em;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s;
+            font-size: 0.95em;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn-small {
+            padding: 8px 20px;
+            font-size: 0.9em;
+        }
+
+        .price-card-btn {
+            background: #667eea;
+            margin-top: 10px;
+        }
+
+        .price-card-btn:hover {
+            background: #5568d3;
+        }
+
+        .why-section {
+            background: #f5f5f7;
+            padding: 60px 20px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .why-item .emoji {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .why-item h4 {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .comparison-table {
+                font-size: 0.9em;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 15px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>🧶 Knit Pocket</h1>
+        <p>The Same Innovation. A Fraction of the Price.</p>
+        <div class="price-highlight">
+            Starting at just ₹1,899
+            <div class="price-inr">Save up to 87% vs Apple's ₹19,000</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Apple Reference Section -->
+        <div class="section">
+            <div class="apple-reference">
+                <h3>🍎 Inspired by Apple x ISSEY MIYAKE</h3>
+                <p style="color: #6e6e73; margin: 15px 0;">Apple launched the iPhone Pocket at ₹12,500 - ₹19,000. It sold out in hours. Now, we're making this innovation accessible to everyone.</p>
+                <a href="https://www.apple.com/jp/shop/product/MYJK3FE/A/iphone-pocket-long-sapphire" target="_blank" class="apple-link">View Apple's Original Product →</a>
+            </div>
+        </div>
+
+        <!-- Product Images Section -->
+        <div class="section">
+            <h2 class="section-title">See It In Action</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="images/product-overview.jpg" alt="Product Overview">
+                    <div class="image-card-content">
+                        <h4>Premium Materials</h4>
+                        <p>Available in 3 classic colors: Sapphire Blue, Cinnamon Brown, and Kuro Black. High-quality ribbed knit construction with 80cm long strap.</p>
+                        <a href="https://wa.me/919769381081?text=Hi!%20I'd%20like%20to%20know%20more%20about%20the%20Knit%20Pocket%20colors%20and%20materials." class="whatsapp-btn whatsapp-btn-small">💬 Ask About Colors</a>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="images/crossbody-style.jpg" alt="Crossbody Style">
+                    <div class="image-card-content">
+                        <h4>Crossbody Style</h4>
+                        <p>Wear diagonally across your body for hands-free convenience. Perfect for commuting, shopping, and daily activities.</p>
+                        <a href="https://wa.me/919769381081?text=Hi!%20I'm%20interested%20in%20the%20Crossbody%20style%20Knit%20Pocket." class="whatsapp-btn whatsapp-btn-small">💬 Order This Style</a>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="images/belt-style.jpg" alt="Belt Style">
+                    <div class="image-card-content">
+                        <h4>Belt/Waist Style</h4>
+                        <p>Wrap around your waist for a sleek, minimalist look. Great for active use and modern street style.</p>
+                        <a href="https://wa.me/919769381081?text=Hi!%20I'm%20interested%20in%20the%20Belt/Waist%20style%20Knit%20Pocket." class="whatsapp-btn whatsapp-btn-small">💬 Order This Style</a>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="images/product-detail.jpg" alt="Product Detail">
+                    <div class="image-card-content">
+                        <h4>Secure & Stretchy</h4>
+                        <p>Expandable ribbed design holds your phone securely while remaining easy to access. Fits all smartphones.</p>
+                        <a href="https://wa.me/919769381081?text=Hi!%20Will%20the%20Knit%20Pocket%20fit%20my%20phone?%20I%20have%20a%20[Your%20Phone%20Model]." class="whatsapp-btn whatsapp-btn-small">💬 Check Compatibility</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Price Comparison Section -->
+        <div class="section">
+            <h2 class="section-title">Unbeatable Value</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Apple Price</th>
+                        <th>Our Price</th>
+                        <th>You Save</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Short Strap (50-75cm)</strong></td>
+                        <td><span class="price-old">₹12,500</span></td>
+                        <td><span class="price-big">₹1,899</span></td>
+                        <td>
+                            <span class="savings">Save ₹10,601 (85%)</span><br>
+                            <a href="https://wa.me/919769381081?text=Hi!%20I'd%20like%20to%20order%20the%20Short%20Strap%20Knit%20Pocket%20for%20₹1,899." class="whatsapp-btn whatsapp-btn-small price-card-btn">💬 Order Short Strap</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Long Strap (100-130cm)</strong></td>
+                        <td><span class="price-old">₹19,000</span></td>
+                        <td><span class="price-big">₹2,299</span></td>
+                        <td>
+                            <span class="savings">Save ₹16,701 (88%)</span><br>
+                            <a href="https://wa.me/919769381081?text=Hi!%20I'd%20like%20to%20order%20the%20Long%20Strap%20Knit%20Pocket%20for%20₹2,299." class="whatsapp-btn whatsapp-btn-small price-card-btn">💬 Order Long Strap</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bundle Deal (Both)</strong></td>
+                        <td><span class="price-old">₹31,500</span></td>
+                        <td><span class="price-big">₹3,799</span></td>
+                        <td>
+                            <span class="savings">Save ₹27,701 (88%)</span><br>
+                            <a href="https://wa.me/919769381081?text=Hi!%20I'd%20like%20to%20order%20the%20Bundle%20Deal%20(Both%20Straps)%20for%20₹3,799." class="whatsapp-btn whatsapp-btn-small price-card-btn">💬 Order Bundle</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Features Section -->
+        <div class="section">
+            <h2 class="section-title">Why Choose Knit Pocket?</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">💰</div>
+                    <h4>Affordable Luxury</h4>
+                    <p>Get the same innovation at up to 88% less than Apple's price</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📱</div>
+                    <h4>Universal Fit</h4>
+                    <p>Works with ANY smartphone - iPhone, Samsung, Google Pixel, and more</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">✨</div>
+                    <h4>Premium Quality</h4>
+                    <p>High-quality ribbed knit construction with durable materials</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🎨</div>
+                    <h4>Multiple Colors</h4>
+                    <p>10 color options for short strap, 6 for long strap</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🔄</div>
+                    <h4>Versatile Wearing</h4>
+                    <p>Crossbody, shoulder, waist, or bag attachment - 5+ styles</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">✅</div>
+                    <h4>In Stock Now</h4>
+                    <p>Unlike Apple's sold-out product, we're ready to ship today</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Who Is This For Section -->
+        <div class="why-section">
+            <h2 class="section-title">Perfect For Everyone</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="emoji">👩‍💼</div>
+                    <h4>Professionals</h4>
+                    <p>Meetings & commutes</p>
+                </div>
+                <div class="why-item">
+                    <div class="emoji">🏃‍♀️</div>
+                    <h4>Active People</h4>
+                    <p>Walks & light exercise</p>
+                </div>
+                <div class="why-item">
+                    <div class="emoji">👨‍👩‍👧</div>
+                    <h4>Parents</h4>
+                    <p>Hands-free with kids</p>
+                </div>
+                <div class="why-item">
+                    <div class="emoji">🎒</div>
+                    <h4>Students</h4>
+                    <p>Quick phone access</p>
+                </div>
+                <div class="why-item">
+                    <div class="emoji">✈️</div>
+                    <h4>Travelers</h4>
+                    <p>Secure sightseeing</p>
+                </div>
+                <div class="why-item">
+                    <div class="emoji">🎵</div>
+                    <h4>Event Goers</h4>
+                    <p>Concerts & festivals</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- What You Get Section -->
+        <div class="section" style="text-align: center;">
+            <h2 class="section-title">What's Included</h2>
+            <div style="max-width: 600px; margin: 0 auto; text-align: left;">
+                <p style="font-size: 1.1em; line-height: 1.8; color: #6e6e73;">
+                    ✓ 1 Premium Knit Pocket in your chosen color<br>
+                    ✓ Adjustable strap with secure closures<br>
+                    ✓ Care instruction card<br>
+                    ✓ 30-day money-back guarantee<br>
+                    ✓ 1-year warranty against defects<br>
+                    ✓ Free shipping on orders over ₹2,500<br>
+                    ✓ Ships within 1-2 business days
+                </p>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="https://wa.me/919769381081?text=Hi!%20I%20have%20a%20question%20about%20the%20Knit%20Pocket.%20Can%20you%20help?" class="whatsapp-btn">💬 Have Questions? Chat With Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <h2>Ready to Upgrade Your Phone Carrying?</h2>
+        <p style="font-size: 1.2em; margin: 20px 0;">Join thousands who've discovered a better way to carry their phone</p>
+        <a href="https://wa.me/919769381081?text=Hi!%20I'm%20interested%20in%20ordering%20the%20Knit%20Pocket.%20Please%20share%20more%20details." class="cta-button">Order Now - Starting at ₹1,899</a>
+        <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.9;">🚚 Free Shipping Over ₹2,500 | 💯 30-Day Guarantee | ⭐ In Stock & Ready to Ship</p>
+    </div>
+
+    <!-- Footer -->
+    <div style="background: #f5f5f7; padding: 40px 20px; text-align: center; color: #6e6e73;">
+        <p style="margin-bottom: 10px;"><strong>Knit Pocket</strong> - Smart Design, Smart Price</p>
+        <p style="font-size: 0.85em;">This product is not affiliated with Apple Inc. or ISSEY MIYAKE. All comparisons based on publicly available information.</p>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add subtle animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.image-card, .feature-box').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
